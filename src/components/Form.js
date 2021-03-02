@@ -9,6 +9,8 @@ import {identifiers} from '../core/identifiers'
 
 import List from './shared/List'
 
+import {Container,Row,Col} from 'react-bootstrap'
+
 const Form = () => {
 
     console.log(claims)
@@ -53,11 +55,12 @@ const Form = () => {
 
 return (
         <>
-            <List listTitle="Hasar Bilgileri" items={filterClaims()} />
-            <div style={{display: 'flex', flexDirection: 'row'}}>
-                <div><Button color="secondary" variant="contained">Geri</Button></div>
-                <div><Button color="primary" variant="contained">İleri</Button></div>
-            </div>
+            <Container>
+                <Row>
+                    <Col md={7} lg={6} xs={12}><List listTitle="Hasar Bilgileri" items={filterClaims()} /></Col>
+                    <Col md={5} lg={6} className="d-block d-xs-none"><List listTitle="Poliçe Bilgileri" items={filterClaims()} /></Col>
+                </Row>
+            </Container>
         </>
     )
 }

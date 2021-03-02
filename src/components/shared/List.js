@@ -3,33 +3,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const List = ({listTitle,items}) => {
 
-    // const items = [
-    //     {
-    //         title: "A",
-    //         value: "A Value"
-    //     },
-    //     {
-    //         title: "B",
-    //         value: "B Value"
-    //     },
-    //     {
-    //         title: "C",
-    //         value: "C Value"
-    //     },
-    // ]
-
     return (
         <>
             <Container>
-                <Row>
+                <Row xs={12}>
                     <Col>{listTitle}</Col>
                 </Row>
             {
                 items.map(({title,value},index) => {
                     return (
-                        <Row key={index}>
-                            <Col>{title}</Col>
-                            <Col>{value}</Col>
+                        <Row key={index} xs={12}>
+                            <Col xs={6}>{title}</Col>
+                            <Col xs={6}>{value}</Col>
                         </Row>
                     )
                 })
