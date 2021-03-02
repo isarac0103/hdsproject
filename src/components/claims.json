@@ -1,0 +1,131 @@
+{
+    "claims": [
+      {
+        "id": "D21CFDCC7DF2253D",
+        "claimNumber": "10093904200012",
+        "sourceSystem": {
+          "category": "ClaimSourceSystem",
+          "code": "2",
+          "textShort": "RH2",
+          "textLong": "RH2",
+          "order": 2
+        },
+        "status": {
+          "category": "ClaimStatus",
+          "code": "OP",
+          "textShort": "Açık",
+          "textLong": "Açık",
+          "order": 1
+        },
+        "claimEnteredDate": "2021-02-28T15:49:07",
+        "lineOfBusiness": {
+          "category": "ClaimLOB",
+          "code": "LB04",
+          "textShort": "Mal",
+          "textLong": "Mal",
+          "order": 4
+        },
+        "insuredCountry": {
+          "category": "CountryCode",
+          "code": "500",
+          "textShort": "Türkiye",
+          "textLong": "Türkiye",
+          "order": 1
+        },
+        "isTotalLoss": false,
+        "fraudScore": 0,
+        "loss": {
+          "id": "D21CFDCC7DF2253D",
+          "branch": {
+            "category": "LossBranch",
+            "code": "701",
+            "textShort": "Yangın",
+            "textLong": "Yangın",
+            "order": 701
+          },
+          "lossType": {
+            "category": "LossType",
+            "code": "FLT2",
+            "textShort": "Yangın",
+            "textLong": "Yangın",
+            "order": 2
+          },
+          "lossDate": "2021-01-01T11:11:00",
+          "description": "hjyb",
+          "initialCoverType": {
+            "category": "CoverType",
+            "code": "M",
+            "textShort": "Maddi",
+            "textLong": "Maddi",
+            "order": 1
+          },
+          "initialCoverSubType": {
+            "category": "CoverSubType",
+            "code": "A",
+            "textShort": "Araç Dışı Maddi",
+            "textLong": "Araç Dışı Maddi",
+            "order": 1
+          },
+          "initialResultOfLoss": {
+            "category": "ResultOfLoss",
+            "code": "20001",
+            "textShort": "Doğal Afet Hasarları",
+            "textLong": "Doğal Afet Hasarları",
+            "order": 2
+          },
+          "initialReasonOfLoss": {
+            "category": "ReasonOfLoss",
+            "code": "1000060",
+            "textShort": "Deprem",
+            "textLong": "Deprem",
+            "order": 1000060
+          },
+          "addressReferenceID": "E1F5992EC822A35D",
+          "lossAddress": {
+            "id": "E1F5992EC822A35D",
+            "addressCodeType": {
+              "category": "AddressCodeType",
+              "code": "GEO",
+              "textShort": "GEOCODE",
+              "textLong": "GEOCODE",
+              "order": 1
+            },
+            "country": {
+              "code": "500",
+              "textShort": "Türkiye",
+              "order": 0
+            },
+            "city": {
+              "code": "34",
+              "textShort": "İstanbul",
+              "order": 0
+            },
+            "county": {
+              "code": "340015",
+              "textShort": "Kadıköy",
+              "order": 0
+            },
+            "fullAddress": "Türkiye, İstanbul, Kadıköy"
+          }
+        },
+        "policy": {
+          "id": "D21CFDCC7DF2253D",
+          "policyNumber": "1009390420",
+          "policyType": {
+            "category": "PolicyType",
+            "code": "738",
+            "textShort": "Eski Konut Paket Sigorta Poliçesi",
+            "textLong": "Eski Konut Paket Sigorta Poliçesi",
+            "order": 738
+          },
+          "renewalNumber": "00",
+          "endorsementNumber": "00",
+          "policyCreatedDate": "2020-07-16T12:00:00",
+          "policyStartDate": "2020-07-16T00:00:00",
+          "policyEndDate": "2021-07-16T23:59:59",
+          "customerNumber": "114470336"
+        }
+      }
+    ]
+  }
+  
