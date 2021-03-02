@@ -1,8 +1,10 @@
 import {useState} from 'react'
 
-import {TextField, Button} from '@material-ui/core'
+import {Table,Button,Form} from 'react-bootstrap'
 
-const Financial = () => {
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+const LineFinancialList = () => {
 
     const [list,setList] = useState([{
         hakSahibi: "Çağlar Özyıldırım",
@@ -16,21 +18,25 @@ const Financial = () => {
 
     return (
         <>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                <div>Hak Sahibi</div>
-                <div>Hasar Kalemi</div>
-                <div>Mevcut Tahmini Hasar Tutarı</div>
-                <div>Para Birimi</div>
-                <div>Güncelleme Zamanı</div>
-            </div>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Table>
+            <thead>
+                <tr>
+                    <th>Hak Sahibi</th>
+                    <th>Hasar Kalemi</th>
+                    <th>Tahmini Hasar Tutarı</th>
+                    <th>Para Birimi</th>
+                    <th>Güncelleme Tarihi</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
             {
                 list.map((item,index) => {
                     return (
-                        <>
-                            <div>{item.hakSahibi}</div>
-                            <div>{item.hasarKalemi}</div>
-                            <div>{updatingRow === index ? (<TextField onChange={(e) => {
+                        <tr key={index}>
+                            <td>{item.hakSahibi}</td>
+                            <td>{item.hasarKalemi}</td>
+                            <td>{updatingRow === index ? (<Form.Control type="email" placeholder="Enter email" onChange={(e) => {
                                 console.log(e.target.value)
 
                                 const newList = list.map((listItem,itemIndex) => {
@@ -49,24 +55,25 @@ const Financial = () => {
 
                                 setList(newList)
 
-                            }} value={item.mtht} />) : item.mtht}</div>
-                            <div>{item.paraBirimi}</div>
-                            <div>{item.gz}</div>
-                            <div><Button onClick={() => {
+                            }} value={item.mtht} />) : item.mtht}</td>
+                            <td>{item.paraBirimi}</td>
+                            <td>{item.gz}</td>
+                            <td><Button onClick={() => {
 
                                 if (updatingRow === index) {// editing
                                     setUpdatingRow(-1)
                                 } else {
                                     setUpdatingRow(index)
                                 }
-                            }}>{updatingRow === index ? "Gönder" : "Düzenle"}</Button></div>
-                        </>
+                            }}>{updatingRow === index ? "Gönder" : "Düzenle"}</Button></td>
+                        </tr>
                     )
                 })
             }
-            </div>
+            </tbody>              
+            </Table>
         </>
     )
 }
 
-export default Financial
+export default LineFinancialList

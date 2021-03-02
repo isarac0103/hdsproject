@@ -1,6 +1,7 @@
 import './App.css';
 
 import ClaimDetails from './components/ClaimDetails'
+import List from './components/shared/List'
 
 // text prop
 

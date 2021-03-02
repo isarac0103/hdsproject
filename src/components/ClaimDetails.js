@@ -1,5 +1,5 @@
 import Form from './Form'
-import Financial from './Financial'
+import LineFinancialList from './LineFinancialList'
 import AppointmentList from './AppointmentList'
 
 import {connectService} from '../core/webService'
@@ -11,7 +11,7 @@ const ClaimDetails = () => {
     return (
         <>
             <Form />
-            <Financial />
+            <LineFinancialList />
             <AppointmentList />
         </>
     )
